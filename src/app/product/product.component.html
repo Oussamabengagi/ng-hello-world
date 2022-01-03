@@ -1,0 +1,15 @@
+<h1>Oussama Bengagi</h1>
+<h2>Il y {{taille}} produits</h2>
+
+<div *ngFor="let product of products">
+    <p [style.backgroundColor]="product.qty > 2 ? 'red' : 'none'">Produit : {{ product.name }}</p>
+    <p class="badge rounded-pill text-dark" [class.bg-danger]="product.qty > 5" [class.bg-warning]="product.qty > 2">
+        Qte : {{ product.qty }}
+     </p>
+    <button (click)="addItem(product)">Ajouter au panier</button>
+
+</div>
+<span class="badge rounded-pill bg-info text-dark"> {{ total_qty /3 }} </span>
+
+<br/>
+<span><p><a href="mailto:oussamabengagi@gmail.com">Email : oussamabengagi@gmail.com</a></p></span>
